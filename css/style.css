@@ -19,8 +19,40 @@ li {
   padding-right: 20px;
 }
 
+header {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 800;
+}
+
+header p {
+  font-weight: 400;
+}
+
+#name {
+  display: flex;
+  align-items: baseline;
+}
+
+#name h1 {
+  color: #5dc8f9;
+}
+
+#social-link {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+}
+
 @media only screen and (max-width: 599px) {
-  .burger-nav {
+  #burger-nav {
     width: 100%;
     height: 60px;
     cursor: pointer;
@@ -41,7 +73,7 @@ li {
     flex-direction: column;
   }
 
-  a {
+  ul li a {
     color: #2f2f31;
     background-color: #eaeaeb;
     text-decoration: none;
@@ -53,33 +85,58 @@ li {
     align-items: center;
   }
 
-  a:hover {
+  ul li a:hover {
     color: #5dc8f9;
     background-color: #424245;
     font-size: 20px;
   }
+
+  header h1 {
+    font-size: 38px;
+  }
+
+  header p {
+    font-size: 22px;
+  }
+
+  #name {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-  .burger-nav {
+  #burger-nav {
     height: 0;
   }
 
   ul {
-    background-color: #ffffff;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 60px;
   }
 
-  a {
-    color: #2f2f31;
+  ul li a {
+    color: #ffffff;
     text-decoration: none;
   }
 
-  a:hover {
+  ul li a:hover {
     color: #065c84;
     font-size: 20px;
+  }
+
+  #toggle-icon {
+    visibility: hidden;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  header p {
+    margin: 20px;
+    font-size: 32px;
   }
 }
