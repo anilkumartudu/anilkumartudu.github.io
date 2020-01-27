@@ -1,4 +1,4 @@
 function openMenu() {
-  let element = document.getElementById("toggle-menu");
+  let element = document.getElementById("ul-nav");
   element.classList.toggle("open");
 }
