@@ -5,7 +5,9 @@ body {
 }
 
 nav {
+  width: 100%;
   background-color: #2f2f31;
+  position: fixed;
 }
 
 ul {
@@ -24,7 +26,7 @@ li {
 
 header {
   color: #ffffff;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +59,9 @@ header p {
 }
 
 section {
-  margin: 32px 48px 48px;
+  padding-bottom: 32px;
+  margin: 0 48px;
+  border-bottom: 1px solid #2f2f2f;
 }
 
 .section-header {
@@ -73,7 +77,7 @@ h2 {
 }
 
 p {
-  font-size: 18px;
+  font-size: 22px;
   text-align: center;
   margin: 3px 0;
 }
@@ -90,11 +94,35 @@ p {
   display: inline-block;
 }
 
-#skills {
-  margin: 25px 0;
+.card {
+  padding: 25px;
+  border: 1px solid #86868b;
+  border-radius: 5px;
+  margin-top: 50px;
 }
 
-@media only screen and (max-width: 599px) {
+.card-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #86868b;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.card-body {
+  padding: 0 25px;
+}
+
+.designation {
+  font-size: 24px;
+  color: #065c84;
+}
+
+.li-card-body {
+  list-style-type: circle;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 799px) {
   #burger-nav {
     width: 100%;
     height: 10vh;
@@ -111,9 +139,9 @@ p {
 
   #ul-nav.open {
     height: auto;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
   }
 
   .li-nav a {
@@ -121,17 +149,27 @@ p {
     color: #2f2f31;
     width: 100%;
     height: 60px;
+    border: 1px solid #2f2f31;
+    background-color: #eaeaeb;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eaeaeb;
-    border: 1px solid #2f2f31;
   }
 
   .li-nav a:hover {
     font-size: 20px;
     color: #5dc8f9;
     background-color: #424245;
+  }
+
+  #resume a {
+    color: #ffffff;
+    background-color: #2f2f31;
+  }
+
+  #resume a:hover {
+    color: #2f2f2f;
+    background-color: #5dc8f9;
   }
 
   header h1 {
@@ -148,16 +186,23 @@ p {
   }
 
   #social-link a {
-    padding: 0 10px;
+    padding: 20px;
   }
 
-  #about-body {
-    display: flex;
+  .anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+  }
+
+  .card-header {
     flex-direction: column;
+    align-items: center;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   #burger-nav {
     height: 0;
   }
@@ -179,6 +224,18 @@ p {
     color: #5dc8f9;
   }
 
+  #resume a {
+    color: #2f2f31;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  #resume a:hover {
+    color: #2f2f31;
+    background-color: #5dc8f9;
+  }
+
   #toggle-icon {
     visibility: hidden;
   }
@@ -196,18 +253,32 @@ p {
     padding: 0 30px;
   }
 
-  #about-body {
+  .anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+  }
+
+  #about-skills {
     display: flex;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #2f2f2f;
+    margin: 0 48px;
+  }
+
+  #about-section {
+    flex: 0.5;
+    border: none;
+  }
+
+  #skills-section {
+    flex: 0.5;
+    border: none;
+  }
+
+  .card-header {
     justify-content: space-between;
     align-items: center;
-  }
-
-  #intro {
-    flex: 0.5;
-  }
-
-  #skills {
-    flex: 0.5;
-    margin: 25px 0;
   }
 }

@@ -26,12 +26,21 @@
         </svg>
       </div>
       <ul id="ul-nav">
-        <li class="li-nav"><a href="#">About</a></li>
-        <li class="li-nav"><a href="#">Experience</a></li>
-        <li class="li-nav"><a href="#">Education</a></li>
+        <li class="li-nav"><a href="#about">About</a></li>
+        <li class="li-nav"><a href="#skills">Skills</a></li>
+        <li class="li-nav"><a href="#experience">Experience</a></li>
+        <!-- <li class="li-nav"><a href="#">Education</a></li> -->
         <li class="li-nav"><a href="#">Projects</a></li>
-        <li class="li-nav"><a href="#">Skills</a></li>
-        <li class="li-nav"><a href="#">Contacts</a></li>
+        <li class="li-nav"><a href="#">Contact</a></li>
+        <li id="resume" class="li-nav">
+          <a
+            aria-label="View Resume"
+            href="https://docs.google.com/document/d/1i65nUdMxdHfUL9UJgugY9HhT8kRgsDjIrLZzlFr52WA/edit?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            >Resume</a
+          >
+        </li>
       </ul>
     </nav>
     <!-- NAVBAR END -->
@@ -45,8 +54,10 @@
       <p>JavaScript Developer</p>
       <div id="social-link">
         <a
-          href="mailto:tuduanil1408@gmail.com"
           aria-label="Mail to tuduanil1408@gmail.com"
+          href="mailto:tuduanil1408@gmail.com"
+          target="_blank"
+          rel="noopener"
         >
           <svg width="32px" height="32px" viewBox="0 0 512 512">
             <g>
@@ -101,11 +112,14 @@
     </header>
     <!-- HEADER END -->
 
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="section-header"><h2>about</h2></div>
-      <div id="about-body" class="section-body">
-        <div id="intro">
+    <div id="about-skills">
+      <!-- ABOUT -->
+      <a id="about" class="anchor"></a>
+      <section id="about-section">
+        <div class="section-header">
+          <h2>about</h2>
+        </div>
+        <div class="section-body">
           <p>
             I am an enthusiastic JavaScript developer
           </p>
@@ -113,25 +127,19 @@
             who loves and dislikes lots of things.
           </p>
           <p>
-            I design, develop and rebuild working
+            I design, develop and rebuild working web pages using
           </p>
           <p>
-            web pages using both pure HTML/CSS
+            both pure HTML/CSS and frameworks where needed.
           </p>
           <p>
-            and frameworks where needed.
+            These web pages are screen friendly and backed
           </p>
           <p>
-            These web pages are backed by adding
+            by Javascript to enable interactivity for better and
           </p>
           <p>
-            Javascript to enable interactivity for
-          </p>
-          <p>
-            better and consistent user experience
-          </p>
-          <p>
-            throughout the site.
+            consistent user experience throughout the site.
           </p>
           <p>
             I also create android application
@@ -140,29 +148,116 @@
             using react-native framework.
           </p>
         </div>
-        <div id="skills">
+      </section>
+      <!-- ABOUT END -->
+
+      <!-- SKILLS -->
+      <a id="skills" class="anchor"></a>
+      <section id="skills-section">
+        <div class="section-header">
+          <h2>skills</h2>
+        </div>
+        <div class="section-body">
           <ul class="ul-skills">
             <li class="li-skills">ReactJS</li>
             <li class="li-skills">React-Native</li>
             <li class="li-skills">Redux</li>
-            <li class="li-skills">JavaScript</li>
           </ul>
-
           <ul class="ul-skills">
+            <li class="li-skills">JavaScript</li>
             <li class="li-skills">HTML</li>
             <li class="li-skills">CSS</li>
+          </ul>
+          <ul class="ul-skills">
             <li class="li-skills">Flexbox</li>
             <li class="li-skills">Grid</li>
           </ul>
-
           <ul class="ul-skills">
             <li class="li-skills">Github</li>
             <li class="li-skills">Bitbucket</li>
           </ul>
         </div>
+      </section>
+      <!-- SKILLS END -->
+    </div>
+
+    <!-- EXPERIENCE -->
+    <a id="experience" class="anchor"></a>
+    <section id="experience-section">
+      <div class="section-header">
+        <h2>experience</h2>
+      </div>
+      <div class="section-body">
+        <!-- CARD #1 -->
+        <div class="card">
+          <div class="card-header">
+            <img
+              alt="3 BRAIN TECHNOLOGIES"
+              src="/images/companyLogo/3brain-logo.png"
+              height="42px"
+              width="142px"
+            />
+            <span class="designation">
+              Junior Developer
+            </span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li class="li-card-body">
+                Mobile application development using React-Native and Redux.
+              </li>
+              <li class="li-card-body">
+                Creating file structure to locate and organize files and
+                versions easily.
+              </li>
+              <li class="li-card-body">
+                Create JSX/CSS code using mockup image.
+              </li>
+              <li class="li-card-body">
+                Assisting senior developer by supporting design and coding.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD #2 -->
+        <div class="card">
+          <div class="card-header">
+            <img
+              alt="3 BRAIN TECHNOLOGIES"
+              src="/images/companyLogo/3brain-logo.png"
+              height="42px"
+              width="142px"
+            />
+            <span class="designation">
+              Software Engineer Trainee
+            </span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li class="li-card-body">
+                Worked closely with mentor to gain new development insights.
+              </li>
+              <li class="li-card-body">
+                Became accustomed to application development in an enterprise
+                setting.
+              </li>
+              <li class="li-card-body">
+                Building mobile application using React-Native.
+              </li>
+              <li class="li-card-body">
+                Maintaining state using Redux. Building web application using
+                React.
+              </li>
+              <li class="li-card-body">
+                Creating responsive design system using Flexbox.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- ABOUT END -->
+    <!-- EXPERIENCE END -->
 
     <script src="./js/script.js"></script>
   </body>
