@@ -58,6 +58,13 @@ header p {
   display: flex;
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
+
 section {
   padding-bottom: 32px;
   margin: 0 48px;
@@ -74,6 +81,7 @@ h2 {
   font-weight: 200;
   text-transform: uppercase;
   color: #065c84;
+  margin: 0;
 }
 
 p {
@@ -94,21 +102,28 @@ p {
   display: inline-block;
 }
 
-.card {
+#experience-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-card {
+  max-width: 700px;
   padding: 25px;
   border: 1px solid #86868b;
   border-radius: 5px;
-  margin-top: 50px;
+  margin: 16px 0 32px;
 }
 
-.card-header {
+.experience-card-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #86868b;
   margin-bottom: 12px;
   display: flex;
 }
 
-.card-body {
+.experience-card-body {
   padding: 0 25px;
 }
 
@@ -117,9 +132,37 @@ p {
   color: #065c84;
 }
 
-.li-card-body {
+.experience-li-card-body {
   list-style-type: circle;
   font-size: 22px;
+}
+
+#projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-card {
+  max-width: 700px;
+  padding: 25px;
+  border: 1px solid #86868b;
+  border-radius: 5px;
+  margin: 16px 0 32px;
+}
+
+.projects-card-body {
+  width: 100%;
+  display: flex;
+}
+
+.project-name {
+  font-size: 24px;
+  color: #065c84;
+}
+
+.project-description {
+  text-align: left;
 }
 
 @media only screen and (max-width: 799px) {
@@ -189,16 +232,17 @@ p {
     padding: 20px;
   }
 
-  .anchor {
-    display: block;
-    position: relative;
-    top: -80px;
-    visibility: hidden;
-  }
-
-  .card-header {
+  .experience-card-header {
     flex-direction: column;
     align-items: center;
+  }
+
+  .projects-card-body {
+    flex-direction: column;
+  }
+
+  .projects-card-body-right {
+    padding-top: 25px;
   }
 }
 
@@ -253,13 +297,6 @@ p {
     padding: 0 30px;
   }
 
-  .anchor {
-    display: block;
-    position: relative;
-    top: -60px;
-    visibility: hidden;
-  }
-
   #about-skills {
     display: flex;
     padding-bottom: 32px;
@@ -277,8 +314,17 @@ p {
     border: none;
   }
 
-  .card-header {
+  .experience-card-header {
     justify-content: space-between;
     align-items: center;
+  }
+
+  .projects-card-body {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .projects-card-body-right {
+    padding: 0 25px;
   }
 }
